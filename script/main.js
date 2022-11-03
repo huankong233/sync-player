@@ -38,6 +38,18 @@ function start() {
             this.hls = new Hls()
             this.hls.loadSource(url)
             this.hls.attachMedia(video)
+          },
+          flv: function (video, url) {
+            if (flvjs.isSupported()) {
+              const flvPlayer = flvjs.createPlayer({
+                type: 'flv',
+                url: url
+              })
+              flvPlayer.attachMediaElement(video)
+              flvPlayer.load()
+            } else {
+              this.art.notice.show = '不支持播放格式：flv'
+            }
           }
         }
       },
