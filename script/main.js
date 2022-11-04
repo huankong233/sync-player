@@ -14,7 +14,7 @@ function start() {
       //初始化属性
       artPlyaer: {
         container: '.artplayer-app',
-        url: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+        url: './test/test.mp4',
         pip: true,
         setting: true,
         flip: true,
